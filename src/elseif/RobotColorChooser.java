@@ -4,10 +4,15 @@
 package elseif;
 
 import javax.swing.JOptionPane;
+
+import org.jointheleague.graphical.robot.Robot;
+
 import java.awt.Color;
 
 public class RobotColorChooser {
 	public static void main(String[] args) {
+		Robot robottybutt = new Robot();
+		robottybutt.setSpeed(50);
 		//1. Create a new Robot
 		
 		//3. Ask the user what color they would like the robot to draw
@@ -21,7 +26,12 @@ public class RobotColorChooser {
 		//4. Set the pen width to 10
 		
 	    //2. Make the robot draw a shape (this will take more than one line of code)
-
+		
+        robottybutt.penDown();
+        for(int i=0; i<4;i++) {
+		robottybutt.move(100);
+            robottybutt.turn(90);
 
 	}
+}
 }
